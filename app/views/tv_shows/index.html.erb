@@ -1,0 +1,26 @@
+<h1>Listing tv_shows</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Identifier</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tv_shows.each do |tv_show| %>
+  <tr>
+    <td><%= tv_show.name %></td>
+    <td><%= tv_show.identifier %></td>
+    <td><%= tv_show.url %></td>
+    <td><%= link_to 'Show', tv_show %></td>
+    <td><%= link_to 'Edit', edit_tv_show_path(tv_show) %></td>
+    <td><%= link_to 'Destroy', tv_show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tv show', new_tv_show_path %>

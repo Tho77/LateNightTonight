@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @episode.date %>
+</p>
+
+<p>
+  <b>Tvshowid:</b>
+  <%= @episode.tvshowid %>
+</p>
+
+<p>
+  <b>Guestid:</b>
+  <%= @episode.guestid %>
+</p>
+
+
+<%= link_to 'Edit', edit_episode_path(@episode) %> |
+<%= link_to 'Back', episodes_path %>

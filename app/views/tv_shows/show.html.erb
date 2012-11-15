@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container pagination-centered">
+  <%= image_tag(@tv_show.identifier + 'Banner.jpg', alt: @tv_show.name) %>
+</div>
+
+<%
+i = 1
+@theWeek.each do |today|
+    today.each_pair do |k,v| %>
+      <h2 class="dateTitle"><%= k.strftime('%A, %B %e') %><hr></h2>
+      <div class="row-fluid">
+        <%  extraSpan = 12 % v.size
+            spanSize = 12 / v.size
+            v.each do |episode, index|
+              if (index == v.length - 1)
+                spanSize = spanSize + extraSpan
+              end %>
+            <div class="span<%= spanSize %>">
+              <h2><%= episode.guest.name %></h2>
+            </div>
+        <%  end %>
+      </div>
+      <hr>
+  <%  end
+i = i + 1
+end %>
