@@ -152,6 +152,8 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    seed_dumper (0.1.3)
+      rails
     selenium-webdriver (2.26.0)
       childprocess (>= 0.2.5)
       libwebsocket (~> 0.1.3)
@@ -196,6 +198,7 @@ DEPENDENCIES
   rails (= 3.2.8)
   rspec-rails
   sass-rails (~> 3.2.3)
+  seed_dumper
   spork
   sqlite3
   uglifier (>= 1.0.3)

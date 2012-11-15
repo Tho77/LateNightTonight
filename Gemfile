@@ -13,6 +13,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-spork'
   gem 'spork'
+  gem 'seed_dumper'
 end
 
 group :test do
